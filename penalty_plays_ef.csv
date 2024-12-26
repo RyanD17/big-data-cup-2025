@@ -1,0 +1,171 @@
+Date,Home_Team,Away_Team,Period,Clock,Home_Team_Skaters,Away_Team_Skaters,Home_Team_Goals,Away_Team_Goals,Team,Player_Id,Event,X_Coordinate,Y_Coordinate,Detail_1,Detail_2,Detail_3,Detail_4,Player_Id_2,X_Coordinate_2,Y_Coordinate_2
+11/16/2024,Team E,Team F,2,18:43,5,5,1,1,Team F,3,Penalty Taken,-81,36.5,Holding,,,,46,,
+11/16/2024,Team E,Team F,2,18:43,5,4,1,1,Team E,68,Faceoff Win,-69,22.5,Backhand,,,,26,,
+11/16/2024,Team E,Team F,2,18:41,5,4,1,1,Team E,29,Puck Recovery,-44,38.5,,,,,,,
+11/16/2024,Team E,Team F,2,18:40,5,4,1,1,Team E,29,Play,-56,37.5,Direct,,,,68,-59.0,24.5
+11/16/2024,Team E,Team F,2,18:39,5,4,1,1,Team E,68,Shot,-59,24.5,Snapshot,Missed,0.0,f,,,
+11/16/2024,Team E,Team F,2,18:37,5,4,1,1,Team E,12,Puck Recovery,-53,-37.5,,,,,,,
+11/16/2024,Team E,Team F,2,18:31,5,4,1,1,Team E,12,Play,-47,-35.5,Direct,,,,68,-94.0,-11.5
+11/16/2024,Team E,Team F,2,18:29,5,4,1,1,Team E,68,Play,-92,-14.5,Direct,,,,12,-78.0,-36.5
+11/16/2024,Team E,Team F,2,18:28,5,4,1,1,Team E,12,Play,-79,-34.5,Direct,,,,68,-94.0,-14.5
+11/16/2024,Team E,Team F,2,18:25,5,4,1,1,Team E,12,Puck Recovery,-83,-34.5,,,,,,,
+11/16/2024,Team E,Team F,2,18:25,5,4,1,1,Team E,12,Play,-83,-34.5,Indirect,,,,29,-40.0,41.5
+11/16/2024,Team E,Team F,2,18:20,5,4,1,1,Team E,29,Play,-40,41.5,Direct,,,,11,-51.0,22.5
+11/16/2024,Team E,Team F,2,18:18,5,4,1,1,Team E,47,Puck Recovery,-35,1.5,,,,,,,
+11/16/2024,Team E,Team F,2,18:17,5,4,1,1,Team E,47,Play,-36,-20.5,Direct,,,,12,-56.0,-36.5
+11/16/2024,Team E,Team F,2,18:15,5,4,1,1,Team E,12,Play,-63,-36.5,Direct,,,,47,-34.0,-40.5
+11/16/2024,Team E,Team F,2,18:13,5,4,1,1,Team E,47,Play,-38,-35.5,Direct,,,,12,-65.0,-31.5
+11/16/2024,Team E,Team F,2,18:09,5,4,1,1,Team E,12,Play,-94,-13.5,Indirect,,,,47,-35.0,-33.5
+11/16/2024,Team E,Team F,2,18:02,5,4,1,1,Team E,47,Play,-97,1.5,Direct,,,,29,-87.0,-22.5
+11/16/2024,Team E,Team F,2,18:01,5,4,1,1,Team E,29,Play,-87,-22.5,Direct,,,,68,-79.0,-2.5
+11/16/2024,Team E,Team F,2,17:58,5,4,1,1,Team F,5,Puck Recovery,-80,37.5,,,,,,,
+11/16/2024,Team E,Team F,2,17:57,5,4,1,1,Team F,5,Dump In/Out,-80,37.5,Lost,,,,,,
+11/16/2024,Team E,Team F,2,17:53,5,4,1,1,Team E,Go,Puck Recovery,77,14.5,,,,,,,
+11/16/2024,Team E,Team F,2,17:51,5,4,1,1,Team E,Go,Play,81,10.5,Indirect,,,,29,85.0,10.5
+11/16/2024,Team E,Team F,2,17:47,5,4,1,1,Team E,29,Play,44,-31.5,Indirect,,,,36,66.0,-24.5
+11/16/2024,Team E,Team F,2,17:43,5,4,1,1,Team E,36,Zone Entry,-25,-20.5,Carried,,,,64,,
+11/16/2024,Team E,Team F,2,17:42,5,4,1,1,Team E,36,Play,-32,-17.5,Direct,,,,42,-39.0,4.5
+11/16/2024,Team E,Team F,2,17:42,5,4,1,1,Team E,42,Play,-39,4.5,Indirect,,,,46,-47.0,13.5
+11/16/2024,Team E,Team F,2,17:40,5,4,1,1,Team E,46,Shot,-54,9.5,Snapshot,Blocked,1.0,f,,,
+11/16/2024,Team E,Team F,2,17:38,5,4,1,1,Team E,42,Puck Recovery,-80,33.5,,,,,,,
+11/16/2024,Team E,Team F,2,17:38,5,4,1,1,Team E,42,Play,-80,33.5,Indirect,,,,20,-32.0,30.5
+11/16/2024,Team E,Team F,2,17:36,5,4,1,1,Team E,20,Play,-30,37.5,Indirect,,,,36,-69.0,-37.5
+11/16/2024,Team E,Team F,2,17:30,5,4,1,1,Team E,36,Play,-81,-34.5,Indirect,,,,19,-63.0,-31.5
+11/16/2024,Team E,Team F,2,17:28,5,4,1,1,Team E,19,Play,-77,-37.5,Direct,,,,46,-78.0,-6.5
+11/16/2024,Team E,Team F,2,17:25,5,4,1,1,Team E,42,Puck Recovery,-49,37.5,,,,,,,
+11/16/2024,Team E,Team F,2,17:25,5,4,1,1,Team E,42,Play,-49,37.5,Indirect,,,,46,-95.0,27.5
+11/16/2024,Team E,Team F,2,17:18,5,4,1,1,Team E,46,Play,-87,34.5,Indirect,,,,42,-81.0,40.5
+11/16/2024,Team E,Team F,2,17:16,5,4,1,1,Team E,42,Play,-81,39.5,Direct,,,,20,-42.0,36.5
+11/16/2024,Team E,Team F,2,17:12,5,4,1,1,Team E,20,Play,-36,2.5,Direct,,,,36,-61.0,-28.5
+11/16/2024,Team E,Team F,2,17:09,5,4,1,1,Team E,36,Play,-57,-37.5,Direct,,,,20,-29.0,-19.5
+11/16/2024,Team E,Team F,2,17:07,5,4,1,1,Team E,20,Shot,-33,-6.5,Wristshot,On Net,1.0,f,,,
+11/16/2024,Team E,Team F,2,17:03,5,4,1,1,Team E,42,Puck Recovery,-87,35.5,,,,,,,
+11/16/2024,Team E,Team F,2,17:03,5,4,1,1,Team E,42,Play,-87,35.5,Direct,,,,46,-93.0,10.5
+11/16/2024,Team E,Team F,2,17:01,5,4,1,1,Team E,46,Incomplete Play,-96,17.5,Direct,,,,20,-32.0,22.5
+11/16/2024,Team E,Team F,2,16:55,5,4,1,1,Team E,20,Puck Recovery,68,31.5,,,,,,,
+11/16/2024,Team E,Team F,2,16:49,5,4,1,1,Team E,20,Zone Entry,-25,11.5,Carried,,,,5,,
+11/16/2024,Team E,Team F,2,16:48,5,4,1,1,Team E,20,Play,-39,12.5,Direct,,,,19,-38.0,19.5
+11/16/2024,Team E,Team F,2,16:46,5,4,1,1,Team F,56,Puck Recovery,-58,41.5,,,,,,,
+11/16/2024,Team E,Team F,2,16:45,5,4,1,1,Team E,20,Takeaway,-95,24.5,,,,,,,
+11/16/2024,Team E,Team F,2,16:43,5,4,1,1,Team F,27,Puck Recovery,-74,13.5,,,,,,,
+11/16/2024,Team E,Team F,2,0:22,5,5,1,1,Team E,47,Penalty Taken,-83,-28.5,Roughing,,,,64,,
+11/16/2024,Team E,Team F,2,0:22,4,5,1,1,Team F,91,Faceoff Win,69,-21.5,Backhand,,,,25,,
+11/16/2024,Team E,Team F,2,0:16,4,5,1,1,Team F,56,Puck Recovery,60,-24.5,,,,,,,
+11/16/2024,Team E,Team F,2,0:14,4,5,1,1,Team F,5,Puck Recovery,29,-17.5,,,,,,,
+11/16/2024,Team E,Team F,2,0:14,4,5,1,1,Team F,5,Play,31,-5.5,Direct,,,,56,49.0,-31.5
+11/16/2024,Team E,Team F,2,0:13,4,5,1,1,Team F,56,Play,48,-31.5,Direct,,,,29,86.0,-14.5
+11/16/2024,Team E,Team F,2,0:12,4,5,1,1,Team F,29,Play,86,-14.5,Direct,,,,91,67.0,-3.5
+11/16/2024,Team E,Team F,2,0:10,4,5,1,1,Team F,5,Puck Recovery,50,8.5,,,,,,,
+11/16/2024,Team E,Team F,2,0:10,4,5,1,1,Team F,5,Shot,62,12.5,Wristshot,Blocked,1.0,f,,,
+11/16/2024,Team E,Team F,2,0:06,4,5,1,1,Team E,46,Puck Recovery,69,-37.5,,,,,,,
+11/16/2024,Team E,Team F,2,0:06,4,5,1,1,Team E,46,Dump In/Out,69,-37.5,Lost,,,,,,
+11/16/2024,Team E,Team F,3,20:00,4,5,1,1,Team F,91,Faceoff Win,0,0.5,Backhand,,,,25,,
+11/16/2024,Team E,Team F,3,19:57,4,5,1,1,Team F,5,Puck Recovery,34,39.5,,,,,,,
+11/16/2024,Team E,Team F,3,19:51,4,5,1,1,Team F,5,Play,10,14.5,Direct,,,,91,-14.0,42.5
+11/16/2024,Team E,Team F,3,19:50,4,5,1,1,Team F,91,Dump In/Out,-14,42.5,Lost,,,,,,
+11/16/2024,Team E,Team F,3,19:50,4,5,1,1,Team F,91,Zone Entry,-26,42.5,Dumped,,,,45,,
+11/16/2024,Team E,Team F,3,19:49,4,5,1,1,Team E,45,Puck Recovery,-91,33.5,,,,,,,
+11/16/2024,Team E,Team F,3,19:49,4,5,1,1,Team E,45,Dump In/Out,-91,33.5,Lost,,,,,,
+11/16/2024,Team E,Team F,3,19:47,4,5,1,1,Team F,5,Puck Recovery,-30,41.5,,,,,,,
+11/16/2024,Team E,Team F,3,19:45,4,5,1,1,Team E,25,Puck Recovery,-29,34.5,,,,,,,
+11/16/2024,Team E,Team F,3,19:42,4,5,1,1,Team E,25,Dump In/Out,2,6.5,Lost,,,,,,
+11/16/2024,Team E,Team F,3,19:38,4,5,1,1,Team F,Go,Puck Recovery,97,9.5,,,,,,,
+11/16/2024,Team E,Team F,3,19:38,4,5,1,1,Team F,Go,Play,97,9.5,Indirect,,,,5,97.0,9.5
+11/16/2024,Team E,Team F,3,19:33,4,5,1,1,Team F,5,Play,16,-38.5,Direct,,,,56,50.0,-19.5
+11/16/2024,Team E,Team F,3,19:27,4,5,1,1,Team F,56,Zone Entry,-26,-24.5,Carried,,,,45,,
+11/16/2024,Team E,Team F,3,19:27,4,5,1,1,Team F,56,Play,-27,-26.5,Direct,,,,29,-36.0,-41.5
+11/16/2024,Team E,Team F,3,19:26,4,5,1,1,Team F,29,Play,-48,-40.5,Direct,,,,5,-31.0,-35.5
+11/16/2024,Team E,Team F,3,19:22,4,5,1,1,Team F,5,Play,-32,-26.5,Direct,,,,13,-58.0,-38.5
+11/16/2024,Team E,Team F,3,19:17,4,5,1,1,Team F,13,Play,-62,-38.5,Direct,,,,5,-32.0,-18.5
+11/16/2024,Team E,Team F,3,19:14,4,5,1,1,Team F,5,Play,-35,-6.5,Direct,,,,13,-60.0,-34.5
+11/16/2024,Team E,Team F,3,19:13,4,5,1,1,Team F,13,Play,-58,-25.5,Direct,,,,91,-62.0,25.5
+11/16/2024,Team E,Team F,3,19:12,4,5,1,1,Team F,91,Shot,-67,20.5,Wristshot,Missed,0.0,f,,,
+11/16/2024,Team E,Team F,3,19:07,4,5,1,1,Team F,5,Puck Recovery,-33,-40.5,,,,,,,
+11/16/2024,Team E,Team F,3,19:07,4,5,1,1,Team F,5,Incomplete Play,-33,-40.5,Indirect,,,,91,-75.0,42.5
+11/16/2024,Team E,Team F,3,19:02,4,5,1,1,Team E,45,Puck Recovery,-85,36.5,,,,,,,
+11/16/2024,Team E,Team F,3,19:02,4,5,1,1,Team E,45,Dump In/Out,-85,36.5,Lost,,,,,,
+11/16/2024,Team E,Team F,3,18:56,4,5,1,1,Team F,Go,Puck Recovery,84,31.5,,,,,,,
+11/16/2024,Team E,Team F,3,18:56,4,5,1,1,Team F,Go,Play,84,31.5,Indirect,,,,55,84.0,31.5
+11/16/2024,Team E,Team F,3,18:50,4,5,1,1,Team F,55,Play,76,-35.5,Indirect,,,,38,55.0,40.5
+11/16/2024,Team E,Team F,3,18:42,4,5,1,1,Team F,38,Play,44,20.5,Direct,,,,78,33.0,-3.5
+11/16/2024,Team E,Team F,3,18:40,4,5,1,1,Team F,78,Play,15,-19.5,Direct,,,,22,-7.0,-40.5
+11/16/2024,Team E,Team F,3,18:38,4,5,1,1,Team F,22,Play,-14,-40.5,Direct,,,,55,-22.0,-32.5
+11/16/2024,Team E,Team F,3,18:35,4,5,1,1,Team F,27,Faceoff Win,-69,-21.5,Backhand,,,,68,,
+11/16/2024,Team E,Team F,3,18:33,4,5,1,1,Team F,55,Puck Recovery,-30,-36.5,,,,,,,
+11/16/2024,Team E,Team F,3,18:32,4,5,1,1,Team F,55,Play,-32,-28.5,Direct,,,,78,-49.0,-37.5
+11/16/2024,Team E,Team F,3,18:30,4,5,1,1,Team F,78,Play,-48,-25.5,Direct,,,,55,-38.0,6.5
+11/16/2024,Team E,Team F,3,18:30,4,5,1,1,Team F,55,Shot,-38,6.5,Slapshot,On Net,0.0,t,,,
+11/16/2024,Team E,Team F,3,18:27,4,5,1,1,Team E,25,Faceoff Win,-69,-21.5,Backhand,,,,27,,
+11/16/2024,Team E,Team F,3,18:24,4,5,1,1,Team E,18,Puck Recovery,-94,-15.5,,,,,,,
+11/16/2024,Team E,Team F,3,18:24,4,5,1,1,Team E,18,Dump In/Out,-94,-15.5,Lost,,,,,,
+11/16/2024,Team E,Team F,3,17:14,5,5,1,1,Team E,19,Penalty Taken,97,11.5,Interference,,,,27,,
+11/16/2024,Team E,Team F,3,17:14,4,5,1,1,Team F,91,Faceoff Win,-69,22.5,Backhand,,,,25,,
+11/16/2024,Team E,Team F,3,17:12,4,5,1,1,Team F,5,Puck Recovery,-31,28.5,,,,,,,
+11/16/2024,Team E,Team F,3,17:10,4,5,1,1,Team F,5,Play,-37,-2.5,Direct,,,,56,-44.0,28.5
+11/16/2024,Team E,Team F,3,17:09,4,5,1,1,Team F,56,Play,-57,25.5,Direct,,,,29,-92.0,21.5
+11/16/2024,Team E,Team F,3,17:08,4,5,1,1,Team F,29,Play,-91,24.5,Direct,,,,56,-73.0,22.5
+11/16/2024,Team E,Team F,3,17:07,4,5,1,1,Team F,56,Play,-72,25.5,Direct,,,,29,-94.0,21.5
+11/16/2024,Team E,Team F,3,17:05,4,5,1,1,Team F,29,Play,-94,25.5,Direct,,,,5,-30.0,25.5
+11/16/2024,Team E,Team F,3,17:00,4,5,1,1,Team F,5,Puck Recovery,56,1.5,,,,,,,
+11/16/2024,Team E,Team F,3,16:53,4,5,1,1,Team F,5,Play,9,7.5,Direct,,,,56,39.0,5.5
+11/16/2024,Team E,Team F,3,16:52,4,5,1,1,Team F,56,Play,39,5.5,Direct,,,,91,17.0,-15.5
+11/16/2024,Team E,Team F,3,16:50,4,5,1,1,Team F,91,Zone Entry,-25,-24.5,Carried,,,,18,,
+11/16/2024,Team E,Team F,3,16:50,4,5,1,1,Team F,91,Play,-27,-24.5,Direct,,,,29,-37.0,-39.5
+11/16/2024,Team E,Team F,3,16:49,4,5,1,1,Team F,29,Incomplete Play,-50,-40.5,Indirect,,,,56,-98.0,-1.5
+11/16/2024,Team E,Team F,3,16:47,4,5,1,1,Team E,45,Takeaway,-100,-5.5,,,,,,,
+11/16/2024,Team E,Team F,3,16:47,4,5,1,1,Team E,45,Dump In/Out,-100,-5.5,Lost,,,,,,
+11/16/2024,Team E,Team F,3,16:41,4,5,1,1,Team F,Go,Puck Recovery,99,5.5,,,,,,,
+11/16/2024,Team E,Team F,3,16:41,4,5,1,1,Team F,Go,Play,99,5.5,Indirect,,,,5,94.0,3.5
+11/16/2024,Team E,Team F,3,16:35,4,5,1,1,Team F,5,Play,30,22.5,Indirect,,,,56,35.0,19.5
+11/16/2024,Team E,Team F,3,16:30,4,5,1,1,Team F,56,Zone Entry,-25,19.5,Carried,,,,45,,
+11/16/2024,Team E,Team F,3,16:29,4,5,1,1,Team F,56,Play,-38,19.5,Indirect,,,,13,-92.0,-30.5
+11/16/2024,Team E,Team F,3,16:26,4,5,1,1,Team F,13,Play,-92,-30.5,Indirect,,,,5,-37.0,-41.5
+11/16/2024,Team E,Team F,3,16:21,4,5,1,1,Team F,5,Play,-30,-10.5,Direct,,,,13,-69.0,-38.5
+11/16/2024,Team E,Team F,3,16:18,4,5,1,1,Team F,13,Play,-63,-34.5,Direct,,,,29,-99.0,-16.5
+11/16/2024,Team E,Team F,3,16:17,4,5,1,1,Team F,29,Play,-99,-16.5,Direct,,,,13,-69.0,-36.5
+11/16/2024,Team E,Team F,3,16:12,4,5,1,1,Team F,13,Play,-65,-37.5,Direct,,,,5,-37.0,-20.5
+11/16/2024,Team E,Team F,3,16:09,4,5,1,1,Team F,5,Play,-31,-2.5,Direct,,,,13,-64.0,-38.5
+11/16/2024,Team E,Team F,3,16:06,4,5,1,1,Team F,13,Play,-70,-38.5,Direct,,,,5,-36.0,-12.5
+11/16/2024,Team E,Team F,3,16:04,4,5,1,1,Team F,5,Play,-39,-5.5,Direct,,,,91,-47.0,17.5
+11/16/2024,Team E,Team F,3,16:04,4,5,1,1,Team F,91,Play,-47,17.5,Direct,,,,5,-38.0,-2.5
+11/16/2024,Team E,Team F,3,16:02,4,5,1,1,Team F,5,Play,-42,-3.5,Direct,,,,13,-73.0,-25.5
+11/16/2024,Team E,Team F,3,16:01,4,5,1,1,Team F,13,Shot,-73,-25.5,Slapshot,On Net,0.0,t,,,
+11/16/2024,Team E,Team F,3,16:00,4,5,1,1,Team E,18,Puck Recovery,-83,-18.5,,,,,,,
+11/16/2024,Team E,Team F,3,15:59,4,5,1,1,Team E,18,Play,-84,-19.5,Indirect,,,,11,-69.0,-37.5
+11/16/2024,Team E,Team F,3,15:58,4,5,1,1,Team E,11,Dump In/Out,-64,-39.5,Lost,,,,,,
+11/16/2024,Team E,Team F,3,15:56,4,5,1,1,Team F,29,Faceoff Win,-20,-21.5,Backhand,,,,12,,
+11/16/2024,Team E,Team F,3,15:54,4,5,1,1,Team F,13,Puck Recovery,-17,-19.5,,,,,,,
+11/16/2024,Team E,Team F,3,15:53,4,5,1,1,Team F,13,Incomplete Play,-10,-20.5,Direct,,,,56,-2.0,26.5
+11/16/2024,Team E,Team F,3,15:53,4,5,1,1,Team E,42,Takeaway,-4,-13.5,,,,,,,
+11/16/2024,Team E,Team F,3,15:53,4,5,1,1,Team E,42,Zone Entry,25,6.5,Carried,,,,5,,
+11/16/2024,Team E,Team F,3,15:52,4,5,1,1,Team E,42,Shot,71,11.5,Wristshot,On Net,0.0,f,,,
+11/16/2024,Team E,Team F,3,15:47,4,5,1,1,Team E,42,Puck Recovery,98,0.5,,,,,,,
+11/16/2024,Team E,Team F,3,15:47,4,5,1,1,Team F,13,Puck Recovery,98,0.5,,,,,,,
+11/16/2024,Team E,Team F,3,15:45,4,5,1,1,Team F,91,Puck Recovery,97,12.5,,,,,,,
+11/16/2024,Team E,Team F,3,15:40,4,5,1,1,Team F,91,Incomplete Play,3,8.5,Direct,,,,56,19.0,5.5
+11/16/2024,Team E,Team F,3,15:37,4,5,1,1,Team F,56,Puck Recovery,10,9.5,,,,,,,
+11/16/2024,Team E,Team F,3,15:34,4,5,1,1,Team F,56,Play,47,21.5,Direct,,,,13,5.0,-5.5
+11/16/2024,Team E,Team F,3,15:31,4,5,1,1,Team F,13,Play,-9,-5.5,Direct,,,,29,-17.0,-39.5
+11/16/2024,Team E,Team F,3,15:30,4,5,1,1,Team F,29,Dump In/Out,-22,-41.5,Retained,,,,,,
+11/16/2024,Team E,Team F,3,15:30,4,5,1,1,Team F,29,Zone Entry,-26,-40.5,Dumped,,,,29,,
+11/16/2024,Team E,Team F,3,15:26,4,5,1,1,Team F,91,Puck Recovery,-90,31.5,,,,,,,
+11/16/2024,Team E,Team F,3,15:25,4,5,1,1,Team F,91,Play,-95,26.5,Indirect,,,,13,-97.0,-26.5
+11/16/2024,Team E,Team F,3,15:20,4,5,1,1,Team F,55,Puck Recovery,16,-34.5,,,,,,,
+11/16/2024,Team E,Team F,3,15:18,4,5,1,1,Team F,55,Play,50,-3.5,Direct,,,,91,-19.0,-0.5
+11/16/2024,Team E,Team F,3,15:16,4,5,1,1,Team F,91,Dump In/Out,-19,-0.5,Retained,,,,,,
+11/16/2024,Team E,Team F,3,15:16,4,5,1,1,Team F,91,Zone Entry,-25,-4.5,Dumped,,,,29,,
+11/16/2024,Team E,Team F,3,7:33,5,5,1,1,Team E,36,Penalty Taken,49,-38.5,Hooking,,,,42,,
+11/16/2024,Team E,Team F,3,7:33,5,5,1,1,Team F,64,Penalty Taken,-48,27.5,Unsportsmanlike conduct,,,,20,,
+11/16/2024,Team E,Team F,3,7:33,5,5,1,1,Team E,20,Penalty Taken,-48,27.5,Unsportsmanlike conduct,,,,64,,
+11/16/2024,Team E,Team F,3,7:33,4,5,1,1,Team F,91,Faceoff Win,-69,22.5,Backhand,,,,25,,
+11/16/2024,Team E,Team F,3,7:32,4,5,1,1,Team F,5,Puck Recovery,-34,37.5,,,,,,,
+11/16/2024,Team E,Team F,3,7:32,4,5,1,1,Team F,5,Play,-34,37.5,Direct,,,,13,-38.0,-16.5
+11/16/2024,Team E,Team F,3,7:31,4,5,1,1,Team F,13,Play,-38,-16.5,Direct,,,,5,-31.0,22.5
+11/16/2024,Team E,Team F,3,7:29,4,5,1,1,Team F,5,Play,-31,22.5,Direct,,,,56,-39.0,40.5
+11/16/2024,Team E,Team F,3,7:27,4,5,1,1,Team F,56,Play,-53,41.5,Direct,,,,5,-29.0,27.5
+11/16/2024,Team E,Team F,3,7:24,4,5,1,1,Team F,5,Play,-41,15.5,Direct,,,,56,-48.0,38.5
+11/16/2024,Team E,Team F,3,7:22,4,5,1,1,Team F,56,Play,-66,32.5,Direct,,,,29,-88.0,23.5
+11/16/2024,Team E,Team F,3,7:21,4,5,1,1,Team F,29,Play,-74,41.5,Direct,,,,5,-40.0,22.5
+11/16/2024,Team E,Team F,3,7:19,4,5,1,1,Team F,5,Play,-38,22.5,Direct,,,,13,-46.0,-22.5
+11/16/2024,Team E,Team F,3,7:19,4,5,1,1,Team F,13,Shot,-46,-22.5,Slapshot,Missed,0.0,t,,,
+11/16/2024,Team E,Team F,3,7:18,4,5,1,1,Team F,56,Goal,-86,3.5,Deflection,On Net,0.0,f,,,
