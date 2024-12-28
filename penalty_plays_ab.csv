@@ -1,5 +1,4 @@
 Date,Home_Team,Away_Team,Period,Clock,Home_Team_Skaters,Away_Team_Skaters,Home_Team_Goals,Away_Team_Goals,Team,Player_Id,Event,X_Coordinate,Y_Coordinate,Detail_1,Detail_2,Detail_3,Detail_4,Player_Id_2,X_Coordinate_2,Y_Coordinate_2
-10/13/2024,Team A,Team B,1,12:41,5,5,0,0,Team B,14,Penalty Taken,-52,-38.5,Holding,,,,28.0,,
 10/13/2024,Team A,Team B,1,12:41,5,4,0,0,Team A,12,Faceoff Win,-69,-21.5,Backhand,,,,18.0,,
 10/13/2024,Team A,Team B,1,12:40,5,4,0,0,Team A,20,Puck Recovery,-45,-25.5,,,,,,,
 10/13/2024,Team A,Team B,1,12:40,5,4,0,0,Team A,20,Play,-45,-25.5,Direct,,,,3.0,-40.0,-15.5
@@ -59,7 +58,6 @@ Date,Home_Team,Away_Team,Period,Clock,Home_Team_Skaters,Away_Team_Skaters,Home_T
 10/13/2024,Team A,Team B,1,10:44,5,4,0,0,Team A,29,Play,-13,-17.5,Direct,,,,8.0,-31.0,-38.5
 10/13/2024,Team A,Team B,1,10:44,5,4,0,0,Team A,29,Zone Entry,-26,-37.5,Played,,,,27.0,,
 10/13/2024,Team A,Team B,1,10:41,5,4,0,0,Team B,28,Takeaway,-49,-37.5,,,,,,,
-10/13/2024,Team A,Team B,1,10:24,5,5,0,0,Team A,8,Penalty Taken,-41,20.5,Slashing,,,,20.0,,
 10/13/2024,Team A,Team B,1,10:24,4,5,0,0,Team A,14,Faceoff Win,69,22.5,Backhand,,,,9.0,,
 10/13/2024,Team A,Team B,1,10:20,4,5,0,0,Team A,38,Puck Recovery,54,36.5,,,,,,,
 10/13/2024,Team A,Team B,1,10:20,4,5,0,0,Team A,38,Dump In/Out,54,36.5,Lost,,,,,,
@@ -117,7 +115,6 @@ Date,Home_Team,Away_Team,Period,Clock,Home_Team_Skaters,Away_Team_Skaters,Home_T
 10/13/2024,Team A,Team B,1,8:26,4,5,0,0,Team B,19,Shot,46,-2.5,Snapshot,Blocked,1.0,f,,,
 10/13/2024,Team A,Team B,1,8:26,4,5,0,0,Team A,12,Faceoff Win,69,-21.5,Backhand,,,,18.0,,
 10/13/2024,Team A,Team B,1,8:24,4,5,0,0,Team A,38,Puck Recovery,78,-20.5,,,,,,,
-10/13/2024,Team A,Team B,2,18:33,5,5,0,0,Team A,24,Penalty Taken,95,11.5,Holding,,,,40.0,,
 10/13/2024,Team A,Team B,2,18:33,4,5,0,0,Team A,14,Faceoff Win,-69,-21.5,Backhand,,,,9.0,,
 10/13/2024,Team A,Team B,2,18:29,4,5,0,0,Team A,3,Puck Recovery,-97,-21.5,,,,,,,
 10/13/2024,Team A,Team B,2,18:29,4,5,0,0,Team A,3,Dump In/Out,-97,-21.5,Lost,,,,,,
@@ -179,7 +176,6 @@ Date,Home_Team,Away_Team,Period,Clock,Home_Team_Skaters,Away_Team_Skaters,Home_T
 10/13/2024,Team A,Team B,2,16:38,4,5,0,0,Team B,19,Puck Recovery,-64,39.5,,,,,,,
 10/13/2024,Team A,Team B,2,16:34,4,5,0,0,Team B,19,Play,-62,34.5,Direct,,,,28.0,-86.0,12.5
 10/13/2024,Team A,Team B,2,16:33,4,5,0,0,Team B,28,Goal,-86,3.5,Snapshot,On Net,0.0,f,,,
-10/13/2024,Team A,Team B,2,7:42,5,5,0,1,Team B,27,Penalty Taken,60,34.5,Holding,,,,29.0,,
 10/13/2024,Team A,Team B,2,7:42,5,4,0,1,Team B,18,Faceoff Win,69,22.5,Backhand,,,,12.0,,
 10/13/2024,Team A,Team B,2,7:41,5,4,0,1,Team B,3,Puck Recovery,87,31.5,,,,,,,
 10/13/2024,Team A,Team B,2,7:41,5,4,0,1,Team B,3,Play,87,31.5,Indirect,,,,10.0,95.0,-19.5
@@ -233,7 +229,6 @@ Date,Home_Team,Away_Team,Period,Clock,Home_Team_Skaters,Away_Team_Skaters,Home_T
 10/13/2024,Team A,Team B,2,5:47,5,4,0,1,Team A,28,Shot,33,-17.5,Slapshot,Missed,1.0,t,,,
 10/13/2024,Team A,Team B,2,5:44,5,4,0,1,Team A,2,Puck Recovery,58,36.5,,,,,,,
 10/13/2024,Team A,Team B,2,5:42,5,4,0,1,Team B,10,Puck Recovery,36,38.5,,,,,,,
-10/13/2024,Team A,Team B,2,3:33,5,5,0,1,Team B,29,Penalty Taken,-57,-5.5,Too many men on the ice,,,,,,
 10/13/2024,Team A,Team B,2,3:33,5,4,0,1,Team A,14,Faceoff Win,69,-21.5,Backhand,,,,18.0,,
 10/13/2024,Team A,Team B,2,3:31,5,4,0,1,Team A,28,Puck Recovery,69,-24.5,,,,,,,
 10/13/2024,Team A,Team B,2,3:31,5,4,0,1,Team A,28,Play,69,-24.5,Direct,,,,2.0,33.0,-23.5
@@ -295,7 +290,6 @@ Date,Home_Team,Away_Team,Period,Clock,Home_Team_Skaters,Away_Team_Skaters,Home_T
 10/13/2024,Team A,Team B,2,1:43,5,4,0,1,Team B,18,Takeaway,41,9.5,,,,,,,
 10/13/2024,Team A,Team B,2,1:41,5,4,0,1,Team B,18,Dump In/Out,20,-16.5,Lost,,,,,,
 10/13/2024,Team A,Team B,2,1:36,5,4,0,1,Team A,3,Puck Recovery,-92,-26.5,,,,,,,
-10/13/2024,Team A,Team B,3,18:31,5,5,0,1,Team A,17,Penalty Taken,5,32.5,Hooking,,,,3.0,,
 10/13/2024,Team A,Team B,3,18:31,4,5,0,1,Team B,15,Faceoff Win,69,-21.5,Backhand,,,,14.0,,
 10/13/2024,Team A,Team B,3,18:30,4,5,0,1,Team B,19,Puck Recovery,64,-20.5,,,,,,,
 10/13/2024,Team A,Team B,3,18:30,4,5,0,1,Team B,19,Play,64,-20.5,Direct,,,,2.0,42.0,-36.5
@@ -354,7 +348,6 @@ Date,Home_Team,Away_Team,Period,Clock,Home_Team_Skaters,Away_Team_Skaters,Home_T
 10/13/2024,Team A,Team B,3,16:39,4,5,0,1,Team B,9,Puck Recovery,93,9.5,,,,,,,
 10/13/2024,Team A,Team B,3,16:36,4,5,0,1,Team B,9,Play,74,37.5,Direct,,,,20.0,35.0,40.5
 10/13/2024,Team A,Team B,3,16:33,4,5,0,1,Team B,20,Play,28,15.5,Direct,,,,9.0,57.0,28.5
-10/13/2024,Team A,Team B,3,14:27,5,5,0,1,Team B,40,Penalty Taken,-67,-10.5,Holding,,,,25.0,,
 10/13/2024,Team A,Team B,3,14:27,5,4,0,1,Team B,18,Faceoff Win,-69,-21.5,Backhand,,,,12.0,,
 10/13/2024,Team A,Team B,3,14:27,5,4,0,1,Team B,3,Puck Recovery,-81,-26.5,,,,,,,
 10/13/2024,Team A,Team B,3,14:27,5,4,0,1,Team B,3,Play,-81,-26.5,Indirect,,,,10.0,-92.0,23.5
@@ -491,19 +484,6 @@ Date,Home_Team,Away_Team,Period,Clock,Home_Team_Skaters,Away_Team_Skaters,Home_T
 10/13/2024,Team A,Team B,3,10:42,5,4,0,1,Team B,2,Puck Recovery,-86,34.5,,,,,,,
 10/13/2024,Team A,Team B,3,10:41,5,4,0,1,Team A,29,Puck Recovery,-93,28.5,,,,,,,
 10/13/2024,Team A,Team B,3,10:40,5,4,0,1,Team A,29,Play,-91,24.5,Indirect,,,,8.0,-98.0,20.5
-10/13/2024,Team A,Team B,3,12:37,5,4,0,1,Team B,18,Penalty Taken,-34,33.5,Interference,,,,14.0,,
-10/13/2024,Team A,Team B,3,12:37,5,3,0,1,Team A,12,Faceoff Win,-69,-21.5,Backhand,,,,9.0,,
-10/13/2024,Team A,Team B,3,12:36,5,3,0,1,Team A,20,Puck Recovery,-84,-22.5,,,,,,,
-10/13/2024,Team A,Team B,3,12:36,5,3,0,1,Team A,20,Play,-84,-22.5,Indirect,,,,3.0,-52.0,-38.5
-10/13/2024,Team A,Team B,3,12:35,5,3,0,1,Team A,3,Play,-52,-38.5,Direct,,,,25.0,-44.0,22.5
-10/13/2024,Team A,Team B,3,12:33,5,3,0,1,Team A,25,Shot,-56,18.5,Wristshot,On Net,1.0,f,,,
-10/13/2024,Team A,Team B,3,12:32,5,3,0,1,Team A,24,Puck Recovery,-82,5.5,,,,,,,
-10/13/2024,Team A,Team B,3,12:32,5,3,0,1,Team A,24,Shot,-86,8.5,Snapshot,Missed,0.0,f,,,
-10/13/2024,Team A,Team B,3,12:31,5,3,0,1,Team A,24,Puck Recovery,-96,-3.5,,,,,,,
-10/13/2024,Team A,Team B,3,12:31,5,3,0,1,Team A,24,Incomplete Play,-96,-3.5,Direct,,,,20.0,-84.0,-5.5
-10/13/2024,Team A,Team B,3,12:29,5,3,0,1,Team A,24,Puck Recovery,-98,-11.5,,,,,,,
-10/13/2024,Team A,Team B,3,12:29,5,3,0,1,Team A,24,Play,-98,-11.5,Direct,,,,12.0,-69.0,-36.5
-10/13/2024,Team A,Team B,3,7:42,5,5,0,1,Team A,7,Penalty Taken,91,32.5,Holding,,,,25.0,,
 10/13/2024,Team A,Team B,3,7:42,4,5,0,1,Team B,15,Faceoff Win,69,-21.5,Backhand,,,,14.0,,
 10/13/2024,Team A,Team B,3,7:42,4,5,0,1,Team B,19,Puck Recovery,77,-18.5,,,,,,,
 10/13/2024,Team A,Team B,3,7:42,4,5,0,1,Team B,19,Play,77,-18.5,Indirect,,,,8.0,53.0,-34.5
@@ -565,7 +545,6 @@ Date,Home_Team,Away_Team,Period,Clock,Home_Team_Skaters,Away_Team_Skaters,Home_T
 10/13/2024,Team A,Team B,3,5:50,4,5,0,1,Team A,3,Dump In/Out,71,-41.5,Lost,,,,,,
 10/13/2024,Team A,Team B,3,5:47,4,5,0,1,Team B,Go,Puck Recovery,-99,2.5,,,,,,,
 10/13/2024,Team A,Team B,3,5:47,4,5,0,1,Team B,Go,Play,-99,2.5,Indirect,,,,3.0,-99.0,2.5
-10/13/2024,Team A,Team B,3,4:58,5,5,0,1,Team B,27,Penalty Taken,-43,-5.5,Tripping,,,,8.0,,
 10/13/2024,Team A,Team B,3,4:58,5,4,0,1,Team A,12,Faceoff Win,-69,-21.5,Backhand,,,,18.0,,
 10/13/2024,Team A,Team B,3,4:58,5,4,0,1,Team A,3,Puck Recovery,-34,-38.5,,,,,,,
 10/13/2024,Team A,Team B,3,4:57,5,4,0,1,Team A,3,Play,-29,-26.5,Direct,,,,25.0,-32.0,33.5
@@ -622,8 +601,6 @@ Date,Home_Team,Away_Team,Period,Clock,Home_Team_Skaters,Away_Team_Skaters,Home_T
 10/13/2024,Team A,Team B,3,3:03,5,4,0,1,Team A,28,Play,-68,41.5,Direct,,,,29.0,-51.0,-30.5
 10/13/2024,Team A,Team B,3,3:00,5,4,0,1,Team A,29,Puck Recovery,-47,-39.5,,,,,,,
 10/13/2024,Team A,Team B,3,2:59,5,4,0,1,Team A,29,Incomplete Play,-50,-41.5,Indirect,,,,8.0,-85.0,-17.5
-10/13/2024,Team A,Team B,3,2:21,5,5,0,1,Team A,17,Penalty Taken,88,34.5,Boarding,,,,25.0,,
-10/13/2024,Team A,Team B,3,2:21,5,5,0,1,Team A,6,Penalty Taken,47,15.5,Holding,,,,20.0,,
 10/13/2024,Team A,Team B,3,2:21,3,5,0,1,Team B,9,Faceoff Win,20,22.5,Backhand,,,,14.0,,
 10/13/2024,Team A,Team B,3,2:20,3,5,0,1,Team B,2,Puck Recovery,-12,10.5,,,,,,,
 10/13/2024,Team A,Team B,3,2:20,3,5,0,1,Team B,2,Play,-12,10.5,Direct,,,,23.0,-18.0,-26.5
@@ -658,13 +635,6 @@ Date,Home_Team,Away_Team,Period,Clock,Home_Team_Skaters,Away_Team_Skaters,Home_T
 10/13/2024,Team A,Team B,3,1:27,4,5,0,2,Team A,8,Zone Entry,-26,36.5,Carried,,,,40.0,,
 10/13/2024,Team A,Team B,3,1:22,4,5,0,2,Team B,15,Puck Recovery,-93,28.5,,,,,,,
 10/13/2024,Team A,Team B,3,1:22,4,5,0,2,Team B,40,Penalty Taken,-80,29.5,Tripping,,,,8.0,,
-10/13/2024,Team A,Team B,3,1:22,4,4,0,2,Team A,20,Faceoff Win,-69,-21.5,Forehand,,,,18.0,,
-10/13/2024,Team A,Team B,3,1:19,4,4,0,2,Team A,3,Puck Recovery,-43,-41.5,,,,,,,
-10/13/2024,Team A,Team B,3,1:19,4,4,0,2,Team A,3,Play,-43,-41.5,Indirect,,,,20.0,-99.0,-16.5
-10/13/2024,Team A,Team B,3,1:17,4,4,0,2,Team A,20,Play,-99,-16.5,Direct,,,,12.0,-76.0,-5.5
-10/13/2024,Team A,Team B,3,1:16,4,4,0,2,Team A,12,Shot,-76,-5.5,Snapshot,On Net,0.0,t,,,
-10/13/2024,Team A,Team B,3,1:14,4,4,0,2,Team A,12,Puck Recovery,-78,41.5,,,,,,,
-10/13/2024,Team A,Team B,3,1:14,4,4,0,2,Team A,12,Incomplete Play,-78,41.5,Indirect,,,,7.0,-37.0,41.5
 10/13/2024,Team A,Team B,3,1:12,5,4,0,2,Team B,18,Takeaway,-53,39.5,,,,,,,
 10/13/2024,Team A,Team B,3,1:12,5,4,0,2,Team B,18,Dump In/Out,-44,40.5,Lost,,,,,,
 10/13/2024,Team A,Team B,3,1:10,5,4,0,2,Team B,18,Faceoff Win,-69,22.5,Backhand,,,,14.0,,
@@ -693,11 +663,22 @@ Date,Home_Team,Away_Team,Period,Clock,Home_Team_Skaters,Away_Team_Skaters,Home_T
 10/13/2024,Team A,Team B,3,0:28,5,4,0,2,Team A,3,Play,40,-17.5,Indirect,,,,28.0,-19.0,-39.5
 10/13/2024,Team A,Team B,3,0:26,5,4,0,2,Team A,28,Play,-18,-41.5,Indirect,,,,3.0,22.0,-40.5
 10/13/2024,Team A,Team B,3,0:22,5,4,0,2,Team A,3,Play,22,-40.5,Direct,,,,25.0,-20.0,38.5
-10/13/2024,Team A,Team B,3,1:22,4,5,0,2,Team B,40,Penalty Taken,-80,29.5,Tripping,,,,8.0,,
-10/13/2024,Team A,Team B,3,1:22,4,4,0,2,Team A,20,Faceoff Win,-69,-21.5,Forehand,,,,18.0,,
-10/13/2024,Team A,Team B,3,1:19,4,4,0,2,Team A,3,Puck Recovery,-43,-41.5,,,,,,,
-10/13/2024,Team A,Team B,3,1:19,4,4,0,2,Team A,3,Play,-43,-41.5,Indirect,,,,20.0,-99.0,-16.5
-10/13/2024,Team A,Team B,3,1:17,4,4,0,2,Team A,20,Play,-99,-16.5,Direct,,,,12.0,-76.0,-5.5
-10/13/2024,Team A,Team B,3,1:16,4,4,0,2,Team A,12,Shot,-76,-5.5,Snapshot,On Net,0.0,t,,,
-10/13/2024,Team A,Team B,3,1:14,4,4,0,2,Team A,12,Puck Recovery,-78,41.5,,,,,,,
-10/13/2024,Team A,Team B,3,1:14,4,4,0,2,Team A,12,Incomplete Play,-78,41.5,Indirect,,,,7.0,-37.0,41.5
+10/13/2024,Team A,Team B,3,0:20,6,4,0,2,Team B,4,Puck Recovery,-59,24.5,,,,,,,
+10/13/2024,Team A,Team B,3,0:20,6,4,0,2,Team B,4,Incomplete Play,-59,24.5,Direct,,,,9.0,-39.0,36.5
+10/13/2024,Team A,Team B,3,0:19,6,4,0,2,Team A,14,Puck Recovery,-30,31.5,,,,,,,
+10/13/2024,Team A,Team B,3,0:18,6,4,0,2,Team A,14,Play,-36,40.5,Direct,,,,25.0,-83.0,32.5
+10/13/2024,Team A,Team B,3,0:16,6,4,0,2,Team A,25,Puck Recovery,-82,38.5,,,,,,,
+10/13/2024,Team A,Team B,3,0:14,6,4,0,2,Team A,25,Puck Recovery,-85,39.5,,,,,,,
+10/13/2024,Team A,Team B,3,0:14,6,4,0,2,Team A,25,Play,-85,39.5,Direct,,,,14.0,-61.0,18.5
+10/13/2024,Team A,Team B,3,0:14,6,4,0,2,Team A,14,Shot,-61,18.5,Snapshot,Blocked,1.0,t,,,
+10/13/2024,Team A,Team B,3,0:13,6,4,0,2,Team B,3,Puck Recovery,-78,6.5,,,,,,,
+10/13/2024,Team A,Team B,3,0:12,6,4,0,2,Team B,3,Play,-71,1.5,Direct,,,,9.0,-52.0,8.5
+10/13/2024,Team A,Team B,3,0:10,6,4,0,2,Team B,9,Goal,-31,7.5,Wristshot,On Net,1.0,f,,,
+10/13/2024,Team A,Team B,3,0:08,5,4,0,3,Team B,38,Faceoff Win,0,0.5,Backhand,,,,15.0,,
+10/13/2024,Team A,Team B,3,0:07,5,4,0,3,Team B,38,Puck Recovery,-6,6.5,,,,,,,
+10/13/2024,Team A,Team B,3,0:07,5,4,0,3,Team B,38,Incomplete Play,-6,6.5,Indirect,,,,8.0,-22.0,1.5
+10/13/2024,Team A,Team B,3,0:06,5,4,0,3,Team A,26,Takeaway,-17,3.5,,,,,,,
+10/13/2024,Team A,Team B,3,0:06,5,4,0,3,Team A,26,Play,-15,6.5,Direct,,,,2.0,7.0,-11.5
+10/13/2024,Team A,Team B,3,0:04,5,4,0,3,Team A,2,Dump In/Out,-6,-23.5,Lost,,,,,,
+10/13/2024,Team A,Team B,3,0:04,5,4,0,3,Team A,2,Zone Entry,-25,-22.5,Dumped,,,,8.0,,
+10/13/2024,Team A,Team B,3,0:01,5,4,0,3,Team B,27,Puck Recovery,-96,-8.5,,,,,,,
