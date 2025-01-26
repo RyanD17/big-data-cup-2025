@@ -1,0 +1,587 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+# Load required libraries
+library(tidyverse)
+library(gganimate)
+library(sportyR)
+library(ggplot2)
+
+# Reading files
+team_a_tracking <- read.csv("filtered_tracking_ab.csv")
+#team_c_tracking <- read.csv("ip_filtered_tracking_cd_500.csv")
+team_c_tracking <- read.csv("filtered_tracking_cd.csv")
+team_e_tracking <- read.csv("filtered_tracking_ef.csv")
+
+# Adding dataframes to a list
+team_tracking <- list(
+  a = team_a_tracking,
+  c = team_c_tracking,
+  e = team_e_tracking
+)
+
+# Function to convert a timestamp to seconds
+to_seconds <- function(time) {
+  if (is.null(time) || is.na(time) || time == "" || !grepl("^[0-9]{1,2}:[0-9]{2}$", as.character(time))) {
+    stop("Invalid time format: ", time)
+  }
+  parts <- as.numeric(strsplit(as.character(time), ":")[[1]])
+  return(parts[1] * 60 + parts[2])
+}
+
+# Function to create a GIF for a specific play
+create_play <- function(team, timestamp, length, period, output_dir) {
+  curr_team <- team_tracking[[team]]
+  
+  curr_team <- curr_team %>% filter(Period == period)
+  
+  start_time <- to_seconds(timestamp)
+  end_time <- start_time - length
+  
+  curr_team$seconds <- sapply(curr_team$Game.Clock, to_seconds)
+  
+  curr_team <- curr_team %>% filter(end_time <= seconds & start_time >= seconds)
+  
+  # Reindex the plays we're looking for
+  curr_team$id <- as.numeric(factor(curr_team$Image.Id))
+  
+  # Define colors for teams
+  team_colors <- c("a" = "orange", "b" = "darkgreen", 
+                   "c" = "orange", "d" = "darkgreen", 
+                   "e" = "orange", "f" = "darkgreen")
+  
+  p <- sportyR::geom_hockey("nhl") + 
+    geom_point(data = curr_team %>% filter(Player.or.Puck == "Player"),
+               aes(x = Rink.Location.X..Feet., y = Rink.Location.Y..Feet., fill = Team), 
+               shape = 21, size = 6, show.legend = F) +  # Set fill color without border
+    geom_text(data = curr_team %>% filter(Player.or.Puck == "Player"),
+              aes(x = Rink.Location.X..Feet., y = Rink.Location.Y..Feet., label = Player.Id),
+                size = 2, show.legend = F) +
+    geom_point(data = curr_team %>% filter(Player.or.Puck == "Puck"),
+               aes(x = Rink.Location.X..Feet., y = Rink.Location.Y..Feet., size = Rink.Location.Z..Feet.), 
+               fill = "black", shape = 21, size = 3, show.legend = F) + 
+    transition_time(id)
+  
+  max_frame <- max(curr_team$id)
+  min_frame <- min(curr_team$id)
+  
+  gif <- animate(p, fps = 30, duration = (max_frame - min_frame) / 30 + 1, renderer = gifski_renderer())
+  
+  # Save the GIF to the output folder
+  filename <- paste0("period_", period, "_time_", gsub(":", "-", start_time), "_team_", team, ".gif")
+  save_animation(gif, file.path(output_dir, filename))
+  
+  return(NULL)
+}
+
+generate_gifs <- function(team, output_dir) {
+  dir.create(output_dir, showWarnings = FALSE) # Create output directory if it doesn't exist
+  print(paste("Saving GIFs to:", output_dir))  # Confirm the output directory
+  
+  team_data <- team_tracking[[team]] %>% arrange(Period, desc(Game.Clock))
+  
+  for (i in 1:(nrow(team_data) - 1)) {
+    start_time <- team_data$Game.Clock[i]
+    end_time <- team_data$Game.Clock[i + 1]
+    period <- team_data$Period[i]
+    
+    length <- to_seconds(start_time) - to_seconds(end_time)
+    
+    if (length <= 0) next # Skip plays with invalid or zero duration
+    
+    tryCatch({
+      create_play(team, start_time, length, period, output_dir)
+    }, error = function(e) {
+      message("Error creating play for row ", i, ": ", e$message)
+    })
+  }
+  
+  message("GIF rendering complete!")
+}
+
+# Generate GIFs for team_c_tracking
+generate_gifs("c", "output_team_c_new")
+
+```
+
+
+```{r}
+library(magick)
+library(geometry)
+library(dplyr)
+
+# Function to create a convex hull for a set of points
+create_hull <- function(points) {
+  if (nrow(points) < 3) return(NULL)  # Need at least 3 points
+  hull_indices <- chull(points$x, points$y)
+  hull_points <- points[c(hull_indices, hull_indices[1]), ]  # Close the hull
+  return(hull_points)
+}
+
+## Function to extract coordinates of colored points
+extract_coordinates <- function(img, color) {
+  # Convert image to RGB values
+  pixels <- image_data(img)
+  dims <- dim(pixels)
+  
+  if (color == "darkgreen") {
+    matches <- which(
+      pixels[1,,] == 0 &   # Exact red value (0)
+      pixels[2,,] == 100 & # Exact green value (100)
+      pixels[3,,] == 0,    # Exact blue value (0)
+      arr.ind = TRUE
+    )
+  } else if (color == "orange") {
+    matches <- which(
+      pixels[1,,] == 255 &  # Exact red value (255)
+      pixels[2,,] == 165 &  # Exact green value (165)
+      pixels[3,,] == 0,     # Exact blue value (0)
+      arr.ind = TRUE
+    )
+  }
+  
+  coords <- data.frame(
+    x = matches[,1],
+    y = matches[,2]
+  )
+  
+  return(coords)
+}
+
+# Set paths
+input_path <- "output_team_c"
+output_path <- "convex_hulls_c"
+dir.create(output_path, showWarnings = FALSE)
+
+# Get GIF files
+gif_files <- list.files(input_path, pattern = "\\.gif$", full.names = TRUE)
+
+# Process each GIF
+for (gif_path in gif_files) {
+  gif <- image_read(gif_path)
+  
+  processed_frames <- lapply(seq_len(length(gif)), function(i) {
+    frame <- gif[i]
+    
+    # Get team coordinates
+    team1_coords <- extract_coordinates(frame, "darkgreen")
+    team2_coords <- extract_coordinates(frame, "orange")
+    
+    frame <- image_draw(frame)
+    
+    # Draw darkgreen hull with semi-transparent fill
+    if (!is.null(team1_coords) && nrow(team1_coords) >= 3) {
+      hull1 <- create_hull(team1_coords)
+      if (!is.null(hull1)) {
+        polygon(hull1$x, hull1$y, 
+               col = rgb(0, 0.39, 0, alpha = 0.2),  # semi-transparent darkgreen
+               border = "darkgreen", 
+               lwd = 2)
+      }
+    }
+    
+    # Draw orange hull with semi-transparent fill
+    if (!is.null(team2_coords) && nrow(team2_coords) >= 3) {
+      hull2 <- create_hull(team2_coords)
+      if (!is.null(hull2)) {
+        polygon(hull2$x, hull2$y, 
+               col = rgb(1, 0.65, 0, alpha = 0.2),  # semi-transparent orange
+               border = "orange", 
+               lwd = 2)
+      }
+    }
+    
+    dev.off()
+    return(frame)
+  })
+  
+  processed_gif <- image_animate(image_join(processed_frames), fps = 10)
+  output_filename <- file.path(output_path, basename(gif_path))
+  image_write(processed_gif, output_filename)
+}
+```
+
+
+
+```{r}
+library(magick)
+library(geometry)
+library(dplyr)
+
+# Function to create a convex hull for a set of points
+create_hull <- function(points) {
+  if (nrow(points) < 3) return(NULL)  # Need at least 3 points
+  hull_indices <- chull(points$x, points$y)
+  hull_points <- points[c(hull_indices, hull_indices[1]), ]  # Close the hull
+  return(hull_points)
+}
+
+## Function to extract coordinates of colored points
+extract_coordinates <- function(img, color) {
+  # Convert image to RGB values
+  pixels <- image_data(img)
+  dims <- dim(pixels)
+  
+  if (color == "darkgreen") {
+    matches <- which(
+      pixels[1,,] == 0 &   # Exact red value (0)
+      pixels[2,,] == 100 & # Exact green value (100)
+      pixels[3,,] == 0,    # Exact blue value (0)
+      arr.ind = TRUE
+    )
+  } else if (color == "orange") {
+    matches <- which(
+      pixels[1,,] == 255 &  # Exact red value (255)
+      pixels[2,,] == 165 &  # Exact green value (165)
+      pixels[3,,] == 0,     # Exact blue value (0)
+      arr.ind = TRUE
+    )
+  }
+  
+  coords <- data.frame(
+    x = matches[,1],
+    y = matches[,2]
+  )
+  
+  return(coords)
+}
+
+# Set paths
+input_path <- "output_team_c"
+output_path <- "convex_hulls_c"
+dir.create(output_path, showWarnings = FALSE)
+
+# Get GIF files
+gif_files <- list.files(input_path, pattern = "\\.gif$", full.names = TRUE)
+
+# Process each GIF
+for (gif_path in gif_files) {
+  gif <- image_read(gif_path)
+  
+  processed_frames <- lapply(seq_len(length(gif)), function(i) {
+    frame <- gif[i]
+    
+    # Get team coordinates for each color (team1 = darkgreen, team2 = orange)
+    team1_coords <- extract_coordinates(frame, "darkgreen")
+    team2_coords <- extract_coordinates(frame, "orange")
+    
+    frame <- image_draw(frame)
+    
+    # Draw darkgreen convex hull for darkgreen points only
+    if (!is.null(team1_coords) && nrow(team1_coords) >= 3) {
+      hull1 <- create_hull(team1_coords)
+      if (!is.null(hull1)) {
+        polygon(hull1$x, hull1$y, 
+               col = rgb(0, 0.39, 0, alpha = 0.2),  # semi-transparent darkgreen
+               border = "darkgreen", 
+               lwd = 2)
+      }
+    }
+    
+    # Draw orange convex hull for orange points only
+    if (!is.null(team2_coords) && nrow(team2_coords) >= 3) {
+      hull2 <- create_hull(team2_coords)
+      if (!is.null(hull2)) {
+        polygon(hull2$x, hull2$y, 
+               col = rgb(1, 0.65, 0, alpha = 0.2),  # semi-transparent orange
+               border = "orange", 
+               lwd = 2)
+      }
+    }
+    
+    dev.off()
+    return(frame)
+  })
+  
+  processed_gif <- image_animate(image_join(processed_frames), fps = 10)
+  output_filename <- file.path(output_path, basename(gif_path))
+  image_write(processed_gif, output_filename)
+}
+
+```
+
+=================
+
+```{r}
+library(magick)
+library(dplyr)
+
+# Set input and output paths
+home_path <- "convex_hulls_c_home"
+away_path <- "convex_hulls_c_away"
+output_path <- "overlap_c"
+dir.create(output_path, showWarnings = FALSE)
+
+# Get GIF files from both home and away folders
+home_files <- list.files(home_path, pattern = "\\.gif$", full.names = TRUE)
+away_files <- list.files(away_path, pattern = "\\.gif$", full.names = TRUE)
+
+# Function to remove 'home' or 'away' from the filename to get the base name
+get_base_name <- function(filename) {
+  gsub("_home\\.gif$|_away\\.gif$", "", basename(filename))
+}
+
+# Find matching base filenames between home and away (ignoring "home" and "away")
+matching_files <- intersect(sapply(home_files, get_base_name), sapply(away_files, get_base_name))
+
+# Process each matching pair
+for (base_name in matching_files) {
+  # Construct full paths for home and away GIFs
+  home_gif_path <- file.path(home_path, paste0(base_name, "_home.gif"))
+  away_gif_path <- file.path(away_path, paste0(base_name, "_away.gif"))
+  
+  # Ensure the GIFs exist before proceeding
+  if (!file.exists(home_gif_path) || !file.exists(away_gif_path)) {
+    message("Missing file pair for: ", base_name)
+    next
+  }
+  
+  # Read the home and away GIFs
+  home_gif <- image_read(home_gif_path)
+  away_gif <- image_read(away_gif_path)
+  
+  # Ensure the GIFs have the same length (number of frames)
+  if (length(home_gif) != length(away_gif)) {
+    message("GIFs do not match in frame count: ", base_name)
+    next  # Skip if the number of frames doesn't match
+  }
+  
+  processed_frames <- lapply(seq_len(length(home_gif)), function(i) {
+    home_frame <- home_gif[i]
+    away_frame <- away_gif[i]
+    
+    # Overlay the frames (home + away)
+    overlap_frame <- image_composite(home_frame, away_frame, operator = "over")
+    
+    return(overlap_frame)
+  })
+  
+  # Create the overlapped GIF
+  overlapped_gif <- image_animate(image_join(processed_frames), fps = 10)
+  
+  # Save the overlapped GIF to the output folder
+  output_filename <- file.path(output_path, paste0(base_name, "_overlap.gif"))
+  image_write(overlapped_gif, output_filename)
+  
+  message("Overlapped GIF saved: ", output_filename)
+}
+
+message("Overlapped GIFs saved to the 'overlap_c' folder.")
+
+```
+
+
+```{r}
+library(magick)
+library(geometry)
+library(dplyr)
+
+# Function to create a convex hull for a set of points
+create_hull <- function(points) {
+  if (nrow(points) < 3) return(NULL)  # Need at least 3 points
+  hull_indices <- chull(points$x, points$y)
+  hull_points <- points[c(hull_indices, hull_indices[1]), ]  # Close the hull
+  return(hull_points)
+}
+
+# Function to extract coordinates of colored points based on fill color
+extract_coordinates <- function(img, color) {
+  # Convert image to RGB values
+  pixels <- image_data(img)
+  dims <- dim(pixels)
+  
+  if (color == "darkgreen") {
+    matches <- which(
+      pixels[1,,] < 180 &    # More permissive red threshold to allow variations
+      pixels[2,,] > 90 &     # Lower green threshold to catch more green shades
+      pixels[3,,] < 180 &    # More permissive blue threshold to account for green shades
+      pixels[2,,] > pixels[1,,] &  # Green component should be stronger than red
+      pixels[2,,] > pixels[3,,],   # Green component should be stronger than blue
+      arr.ind = TRUE
+    )
+  } else if (color == "orange") {
+    matches <- which(
+      pixels[1,,] > 200 &    # Lowered red threshold
+      pixels[2,,] < 150 &    # Adjusted green range
+      pixels[3,,] < 150,     # Increased blue threshold
+      arr.ind = TRUE
+    )
+  }
+  
+  coords <- data.frame(
+    x = matches[,1],
+    y = matches[,2]
+  )
+  
+  return(coords)
+}
+
+# Set input and output paths
+input_folder <- "output_team_c"  # Folder where original GIFs are stored
+output_folder <- "convex_hulls_c2"  # Folder to save the new GIFs with hulls
+dir.create(output_folder, showWarnings = FALSE)
+
+# Get GIF files from the input folder
+gif_files <- list.files(input_folder, pattern = "\\.gif$", full.names = TRUE)
+
+# Process each GIF
+for (gif_path in gif_files) {
+  gif <- image_read(gif_path)
+  
+  # Process each frame of the GIF
+  processed_frames <- lapply(seq_len(length(gif)), function(i) {
+    frame <- gif[i]
+    
+    # Extract coordinates for both teams based on the fill color
+    team1_coords <- extract_coordinates(frame, "darkgreen")
+    team2_coords <- extract_coordinates(frame, "orange")
+    
+    frame <- image_draw(frame)
+    
+    # Draw shaded darkgreen hull
+    if (!is.null(team1_coords) && nrow(team1_coords) >= 3) {
+      hull1 <- create_hull(team1_coords)
+      if (!is.null(hull1)) {
+        polygon(hull1$x, hull1$y, 
+               col = rgb(0, 0.5, 0, alpha = 0.5),  # Shade with translucent darkgreen
+               border = "darkgreen", 
+               lwd = 2)
+      }
+    }
+    
+    # Draw shaded orange hull
+    if (!is.null(team2_coords) && nrow(team2_coords) >= 3) {
+      hull2 <- create_hull(team2_coords)
+      if (!is.null(hull2)) {
+        polygon(hull2$x, hull2$y, 
+               col = rgb(1, 0.647, 0, alpha = 0.5),  # Shade with translucent orange
+               border = "orange", 
+               lwd = 2)
+      }
+    }
+    
+    dev.off()  # Close the drawing context
+    return(frame)
+  })
+  
+  # Create a new GIF with convex hulls
+  output_gif <- image_animate(image_join(processed_frames), fps = 25)
+  
+  # Save the output GIF in the specified folder
+  output_gif_filename <- file.path(output_folder, basename(gif_path))
+  image_write(output_gif, output_gif_filename)
+  
+  message("New GIF with convex hulls saved at: ", output_gif_filename)
+}
+```
+
+```{r}
+library(magick)
+library(geometry)
+library(dplyr)
+
+# Function to create a convex hull for a set of points
+create_hull <- function(points) {
+  if (nrow(points) < 3) return(NULL)  # Need at least 3 points
+  hull_indices <- chull(points$x, points$y)  # Compute convex hull
+  hull_points <- points[c(hull_indices, hull_indices[1]), ]  # Close the hull
+  return(hull_points)
+}
+
+# Function to extract coordinates of colored points based on fill color
+extract_coordinates <- function(img, color) {
+  # Convert image to RGB values
+  pixels <- image_data(img)
+  
+  if (color == "darkgreen") {
+    # Green pixels detection (focused on green intensity)
+    matches <- which(
+      pixels[1,,] < 180 &    # Allow some red variation
+      pixels[2,,] > 80 &     # Strong green intensity
+      pixels[3,,] < 180 &    # Allow some blue variation
+      pixels[2,,] > pixels[1,,] &  # Green should be dominant over red
+      pixels[2,,] > pixels[3,,],   # Green should be dominant over blue
+      arr.ind = TRUE
+    )
+  } else if (color == "orange") {
+    # Orange pixels detection
+    matches <- which(
+      pixels[1,,] > 200 &    # High red intensity for orange
+      pixels[2,,] < 150 &    # Medium green intensity for orange
+      pixels[3,,] < 150,     # Low blue intensity for orange
+      arr.ind = TRUE
+    )
+  }
+  
+  coords <- data.frame(
+    x = matches[,1],
+    y = matches[,2]
+  )
+  
+  return(coords)
+}
+
+# Set input and output paths
+input_folder <- "output_team_c"  # Folder where original GIFs are stored
+output_folder <- "convex_hulls_c2"  # Folder to save the new GIFs with hulls
+dir.create(output_folder, showWarnings = FALSE)
+
+# Get GIF files from the input folder
+gif_files <- list.files(input_folder, pattern = "\\.gif$", full.names = TRUE)
+
+# Process each GIF
+for (gif_path in gif_files) {
+  gif <- image_read(gif_path)
+  
+  # Process each frame of the GIF
+  processed_frames <- lapply(seq_len(length(gif)), function(i) {
+    frame <- gif[i]
+    
+    # Extract coordinates for both teams based on fill color (green for team 1, orange for team 2)
+    team1_coords <- extract_coordinates(frame, "darkgreen")
+    team2_coords <- extract_coordinates(frame, "orange")
+    
+    frame <- image_draw(frame)
+    
+    # Draw darkgreen hull based on detected green dots
+    if (!is.null(team1_coords) && nrow(team1_coords) >= 3) {
+      hull1 <- create_hull(team1_coords)
+      if (!is.null(hull1)) {
+        polygon(hull1$x, hull1$y, 
+               col = NA,  # No fill
+               border = "darkgreen", 
+               lwd = 2)
+      }
+    }
+    
+    # Draw orange hull based on detected orange dots
+    if (!is.null(team2_coords) && nrow(team2_coords) >= 3) {
+      hull2 <- create_hull(team2_coords)
+      if (!is.null(hull2)) {
+        polygon(hull2$x, hull2$y, 
+               col = NA,  # No fill
+               border = "orange", 
+               lwd = 2)
+      }
+    }
+    
+    dev.off()  # Close the drawing context
+    return(frame)
+  })
+  
+  # Create a new GIF with convex hulls
+  output_gif <- image_animate(image_join(processed_frames), fps = 25)
+  
+  # Save the output GIF in the specified folder
+  output_gif_filename <- file.path(output_folder, basename(gif_path))
+  image_write(output_gif, output_gif_filename)
+  
+  message("New GIF with convex hulls saved at: ", output_gif_filename)
+}
+
+```
+
+
