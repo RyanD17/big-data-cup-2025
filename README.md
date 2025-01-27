@@ -1,0 +1,1 @@
+This is the reposity containing code, and our results for the 2025 Big Data Cup Analytics Compeition hosted by Stathletes, the Rotman School of Management, and the University of Toronto Sports Analytics Student Group (UTSPAN)
