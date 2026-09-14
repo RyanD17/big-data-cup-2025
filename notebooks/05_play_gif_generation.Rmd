@@ -11,10 +11,10 @@ library(sportyR)
 library(ggplot2)
 
 # Reading files
-team_a_tracking <- read.csv("filtered_tracking_ab.csv")
+team_a_tracking <- read.csv("../data/derived/filtered_tracking_ab.csv")
 #team_c_tracking <- read.csv("ip_filtered_tracking_cd_500.csv")
-team_c_tracking <- read.csv("filtered_tracking_cd.csv")
-team_e_tracking <- read.csv("filtered_tracking_ef.csv")
+team_c_tracking <- read.csv("../data/derived/filtered_tracking_cd.csv")
+team_e_tracking <- read.csv("../data/derived/filtered_tracking_ef.csv")
 
 # Adding dataframes to a list
 team_tracking <- list(
